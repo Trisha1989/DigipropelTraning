@@ -1,0 +1,12 @@
+Enter two numbers
+Enter 1st number
+5
+The value of 1st number =5
+Enter 2nd number
+3
+The value of 2nd number =3
+The multiplication of two number is:15
+The addition of two number is:8
+The Division of two number is:1
+The substraction of two number is:2
+
