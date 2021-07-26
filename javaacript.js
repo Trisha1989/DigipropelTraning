@@ -3,7 +3,7 @@ window.onload = () =>
     {
         /*calling a function calculateTip
          which will calculate the tip for the bill.*/
-        document.querySelector('#calculate').onclick = calculateTip;
+        document.querySelector('#calculate').onclick = calculateButton;
     }
   
 function calculateButton() {
@@ -11,25 +11,9 @@ function calculateButton() {
     variables for further calculations.*/
     let amount = document.querySelector('#amount').value;
     let persons = document.querySelector('#persons').value;
-    let service = document.querySelector('#services').value;
+    let service = document.querySelector('#service').value;
   
-    console.log(service);
-    /*if statement will work when user presses 
-          calculate without entering values. */
-    //so will display an alert box and return.
-    if (amount === '' && service === 'Select') {
-        alert("Please enter valid values");
-        return;
-    }
-  
-    //now we are checking number of persons 
-    if (persons === '1')
-    //if there is only one person then we need not to display each.
-        document.querySelector('#each').style.display = 'none';
-    else
-    //if there are more than one person we will display each.  
-        document.querySelector('#each').style.display = 'block';
-  
+
     /*calculating the tip by multiplying total-bill and type of
      service; then dividing it by number of persons.*/
     //fixing the total amount upto 2 digits of decimal
@@ -37,6 +21,6 @@ function calculateButton() {
     total = total.toFixed(2);
   
     //finally displaying the tip value 
-    document.querySelector('.button').style.display = 'block';
+    //document.querySelector('.tip').style.display = 'block';
     document.querySelector('#total').innerHTML = total;
 }
